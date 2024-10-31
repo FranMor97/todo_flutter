@@ -7,24 +7,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:isar/isar.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:to_do_bloc/data/isar_todo.dart';
-import 'package:to_do_bloc/data/repositories/isar_todo_repo.dart';
 
-//import 'package:to_do_bloc/main.dart';
+import 'package:to_do/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    final dir = await getApplicationDocumentsDirectory();
-
-    //open isar database
-    final isar = await Isar.open([TodoIsarSchema], directory: dir.path);
-
-    final isarTodoRepo =IsarTodoRepo(isar);
-
-    //await tester.pumpWidget( MyApp(todoRepo: isarTodoRepo));
+    await tester.pumpWidget(const MyApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

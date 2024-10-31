@@ -1,11 +1,11 @@
 {
-    "name": "to_do_bloc",
-    "short_name": "to_do_bloc",
+    "name": "to_do",
+    "short_name": "to_do",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "To Do Learn",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
